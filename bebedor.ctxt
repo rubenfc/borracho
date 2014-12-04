@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=limiteDeAlcohol\ copa\ pregunta
+comment0.target=bebedor(int,\ Cubata,\ java.lang.String)
+comment1.params=
+comment1.target=void\ beber()
+comment2.params=
+comment2.target=int\ getAlcoholEnSangre()
+comment3.params=
+comment3.target=java.lang.String\ getRespuesta()
+numComments=4
