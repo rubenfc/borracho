@@ -1,10 +1,13 @@
 #BlueJ class context
-comment0.params=limiteDeAlcohol\ copa\ pregunta
-comment0.target=bebedor(int,\ Cubata,\ java.lang.String)
-comment1.params=
-comment1.target=void\ beber()
+comment0.params=limiteDeAlcohol\ nombre
+comment0.target=bebedor(int,\ java.lang.String)
+comment1.params=copa
+comment1.target=void\ beber(Cubata)
 comment2.params=
 comment2.target=int\ getAlcoholEnSangre()
-comment3.params=
-comment3.target=java.lang.String\ getRespuesta()
-numComments=4
+comment3.params=pregunta
+comment3.target=java.lang.String\ getRespuesta(java.lang.String)
+comment4.params=porcentaje
+comment4.target=void\ sleep(int)
+comment4.text=\r\n\ este\ metodo\ simula\ dormir,\ con\ esto\ se\ consigue\ que\ el\ nivel\ de\ alcohol\ sea\ 0\ pero\ su\ limite\ de\ alcohol\ se\ vera\ reducido\ en\ un\ porcentaje\ que\ el\ usuario\ \r\n\ introducira,\ debido\ a\ la\ resaca\ \ \r\n
+numComments=5

@@ -9,22 +9,20 @@ public class bebedor
 {
    private int alcoholEnSangre;
    private int limiteDeAlcohol;
-   private Cubata copa;
-   private String pregunta;
+   private String nombre;
    
-   public bebedor(int limiteDeAlcohol, Cubata copa, String pregunta)
+   public bebedor(int limiteDeAlcohol, String nombre)
    {
        this.limiteDeAlcohol = limiteDeAlcohol; 
-       this.copa = copa;
-       this.pregunta = pregunta;
+       this.nombre = nombre;
        alcoholEnSangre = 0;
    }
    
-   public void beber()   
-   {
-       int alcohol = copa.getCantidadDeAlcohol();
+   public void beber(Cubata copa)   
+   {       
        if(alcoholEnSangre < limiteDeAlcohol)
        {
+           int alcohol = copa.getCantidadDeAlcohol();
            alcoholEnSangre = alcoholEnSangre + alcohol;
        }
        
@@ -39,28 +37,38 @@ public class bebedor
        return alcoholEnSangre;
    }
    
-   public String getRespuesta()
+   public String getRespuesta(String pregunta)
    {
        String respuesta = null;
-       if(alcoholEnSangre <= limiteDeAlcohol)
+       if((alcoholEnSangre <= limiteDeAlcohol) && (!pregunta.contains(nombre)))
         {
             int numeroDeCaracteres = pregunta.length();           
-            if(numeroDeCaracteres % 2 == 0)
+            if((numeroDeCaracteres % 2) == 0)
             {
-                 respuesta = "no";
+                 respuesta = "si";
             }
         
             else
             {
-                respuesta = "si";
+                respuesta = "no";
             }
         }
         else
         {
-            respuesta = pregunta + "!!!!!";
+            respuesta = pregunta.toUpperCase();
         }
    
         return respuesta;
+    }
+    
+    /**
+     * este metodo simula dormir, con esto se consigue que el nivel de alcohol sea 0 pero su limite de alcohol se vera reducido en un porcentaje que el usuario 
+     * introducira, debido a la resaca  
+     */
+    public void sleep(int porcentaje)
+    {
+        alcoholEnSangre = 0;
+        limiteDeAlcohol = limiteDeAlcohol - ((limiteDeAlcohol * porcentaje) / 100);
     }
    
     
