@@ -70,7 +70,28 @@ public class bebedor
         alcoholEnSangre = 0;
         limiteDeAlcohol = limiteDeAlcohol - ((limiteDeAlcohol * porcentaje) / 100);
     }
+    
    
-    
-    
+    /**
+     * simula conducir, en caso de que supere la tasa de alcohol, ira a la carcel x tiempo en funcion de en cuanto lo superes 
+     */
+    public void conducir()
+    {
+        if ((alcoholEnSangre > 25) && (alcoholEnSangre < 50))
+        {
+            System.out.println("has superado la tasa de alcohol, estas arrestado durante 2 días");
+        }
+        else if (alcoholEnSangre < 50)
+        {
+            System.out.println("HAS DOBLADO LA TASA DE ALCOHOL PERMITIDDA!! estaras 5 días arrestado");
+        }
+        else if (alcoholEnSangre == 0)
+        {
+            System.out.println("así me gusta, no has bebido, puedes continuar");
+        }
+        else
+        {
+            System.out.println("aun no has llegado al limite, puedes contunuar, pero deja de beber");
+        }
+    }
 }
